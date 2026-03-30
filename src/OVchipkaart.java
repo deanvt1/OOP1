@@ -1,9 +1,12 @@
+import OOP1.Locatie;
+
 public class OVchipkaart
 {   //variabelen
     private int kaartNummer;
     private double saldo;
     private boolean geldig;
     private boolean ingecheckt;
+    private Locatie locatie;
 
 //constructor
 public OVchipkaart(int kaartNummer, double saldo, boolean geldig) {
@@ -11,6 +14,7 @@ public OVchipkaart(int kaartNummer, double saldo, boolean geldig) {
     this.saldo = saldo;
     this.geldig = geldig;
     this.ingecheckt = false;
+    this.locatie = locatie;
 }
 //functies
 public double getSaldo() {
