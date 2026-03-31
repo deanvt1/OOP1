@@ -1,3 +1,5 @@
+package OOP1;
+
 public class Paal
 {//variabelen
     private double instapTarief = 2.00;
