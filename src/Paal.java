@@ -7,7 +7,21 @@ public class Paal
 
 
     //functies
-    public void inchecken(OVchipkaart kaart) {
+    public void uitchecken(OVchipkaart kaart, Locatie bestemming) {
+        if (!kaart.isIngecheckt()) {
+            System.out.println("Je bent niet ingecheckt");
+            return;
+        }
+        double afstand = kaart.getStartLocatie().berekenenAfstand(bestemming);
+        double kosten = afstand * 0.10;
+        kaart.verlaagSaldo(kosten);
+        kaart.setIngecheckt(false);
+        System.out.println("Je bent uitgecheckt. Kosten: €" + kosten + " Nieuw saldo: " + kaart.getSaldo());
+    }
+
+
+
+    public void inchecken(OVchipkaart kaart, Locatie locatie) {
         if (!kaart.isGeldig()) {
             System.out.println("Kaart is ongeldig");
             return;
@@ -22,7 +36,7 @@ public class Paal
         }
         kaart.verlaagSaldo(instapTarief);
         kaart.setIngecheckt(true);
-        kaart.setstartLocatie(locatie);
+        kaart.setStartLocatie(locatie);
         System.out.println("Je bent ingecheckt Nieuw saldo: " + kaart.getSaldo());
         }
     }

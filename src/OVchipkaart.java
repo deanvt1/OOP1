@@ -7,7 +7,7 @@ public class OVchipkaart
     private double saldo;
     private boolean geldig;
     private boolean ingecheckt;
-    private Locatie startlocatie;
+    private Locatie startLocatie;
 
 
 //constructor
@@ -37,8 +37,8 @@ public void verlaagSaldo(double bedrag) {
 public void setIngecheckt(boolean ingecheckt) {
     this.ingecheckt = ingecheckt;
 }
-public void setStartLocatie(Locatie1) {
-            this.startLocatie = 1;
+public void setStartLocatie(Locatie locatie) {
+            this.startLocatie = locatie;
     }
     public Locatie getStartLocatie() {
     return startLocatie;
