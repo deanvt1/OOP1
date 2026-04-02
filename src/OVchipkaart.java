@@ -1,4 +1,5 @@
-import OOP1;
+package OOP1;
+
 
 public class OVchipkaart
 {   //variabelen
@@ -6,6 +7,7 @@ public class OVchipkaart
     private double saldo;
     private boolean geldig;
     private boolean ingecheckt;
+    private Locatie startlocatie;
 
 
 //constructor
@@ -14,6 +16,9 @@ public OVchipkaart(int kaartNummer, double saldo, boolean geldig) {
     this.saldo = saldo;
     this.geldig = geldig;
     this.ingecheckt = false;
+
+
+
 
 }
 //functies
@@ -32,4 +37,12 @@ public void verlaagSaldo(double bedrag) {
 public void setIngecheckt(boolean ingecheckt) {
     this.ingecheckt = ingecheckt;
 }
+public void setStartLocatie(Locatie1) {
+            this.startLocatie = 1;
+    }
+    public Locatie getStartLocatie() {
+    return startLocatie;
+    }
+
 }
+

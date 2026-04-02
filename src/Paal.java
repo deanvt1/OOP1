@@ -22,6 +22,7 @@ public class Paal
         }
         kaart.verlaagSaldo(instapTarief);
         kaart.setIngecheckt(true);
+        kaart.setstartLocatie(locatie);
         System.out.println("Je bent ingecheckt Nieuw saldo: " + kaart.getSaldo());
         }
     }
