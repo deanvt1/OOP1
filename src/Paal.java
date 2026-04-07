@@ -3,16 +3,20 @@ package OOP1;
 public class Paal
 {//variabelen
     private double instapTarief = 2.00;
+    private Locatie locatie;
+    
     //constructor
-
+    public Paal(Locatie locatie) {
+        this.locatie = locatie;
+    }
 
     //functies
-    public void uitchecken(OVchipkaart kaart, Locatie bestemming) {
+    public void uitchecken(OVchipkaart kaart) {
         if (!kaart.isIngecheckt()) {
             System.out.println("Je bent niet ingecheckt");
             return;
         }
-        double afstand = kaart.getStartLocatie().berekenenAfstand(bestemming);
+        double afstand = kaart.getStartLocatie().berekenenAfstand(locatie);
         double kosten = afstand * 0.10;
         kaart.verlaagSaldo(kosten);
         kaart.setIngecheckt(false);
@@ -21,7 +25,7 @@ public class Paal
 
 
 
-    public void inchecken(OVchipkaart kaart, Locatie locatie) {
+    public void inchecken(OVchipkaart kaart) {
         if (!kaart.isGeldig()) {
             System.out.println("Kaart is ongeldig");
             return;
