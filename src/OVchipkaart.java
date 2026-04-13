@@ -11,13 +11,12 @@ public class OVchipkaart
 
 
 //constructor
-public OVchipkaart(int kaartNummer, double saldo, boolean geldig) {
+public OVchipkaart(int kaartNummer, double saldo, boolean geldig)
+{
     this.kaartNummer = kaartNummer;
     this.saldo = saldo;
     this.geldig = geldig;
     this.ingecheckt = false;
-
-
 
 
 }
