@@ -33,6 +33,9 @@ public boolean isIngecheckt() {
 public void verlaagSaldo(double bedrag) {
     saldo -= bedrag;
 }
+public void verhoogSaldo(double bedrag) {
+    saldo += bedrag;
+}
 public void setIngecheckt(boolean ingecheckt) {
     this.ingecheckt = ingecheckt;
 }
